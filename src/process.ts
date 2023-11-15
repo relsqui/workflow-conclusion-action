@@ -45,6 +45,7 @@ export const execute = async(logger: Logger, octokit: Octokit, context: Context)
   console.log(conclusion);
 
   setOutput('conclusion', conclusion);
+  setOutput('jobs', jobs);
   const envName = getInput('SET_ENV_NAME');
   if (envName) {
     exportVariable(envName, conclusion);
